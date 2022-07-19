@@ -51,7 +51,6 @@ stories:
   - intent: weather
   - action: utter_ask_location
   - intent: city_info
-  - action: utter_getting_weather
   - action: action_get_weather
   - intent: thanks
   - action: utter_welcome
@@ -62,7 +61,6 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: weather_for_location
-  - action: utter_getting_weather
   - action: action_get_weather
   - intent: thanks
   - action: utter_welcome

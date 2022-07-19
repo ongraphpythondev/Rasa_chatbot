@@ -40,8 +40,6 @@ responses:
   utter_ask_location:
     - text: of where?
     - text: In what city?
-  utter_getting_weather:
-    - text: Ok, getting weather of [location] ...
   utter_welcome:
   - text: Welcome
 
