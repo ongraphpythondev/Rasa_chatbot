@@ -46,6 +46,7 @@ responses:
 actions:
   - utter_greet
   - action_get_weather
+  - action_hello_world
   
 
 session_config:

@@ -12,6 +12,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 import requests
+from rasa_sdk.events import AllSlotsReset
 
 class ActionCheckWeather(Action):
     
@@ -31,17 +32,18 @@ class ActionCheckWeather(Action):
         wind_mph = current['wind']['speed']
         response = msg + "\n"+"""It is currently {} in  {} at the moement. The temperature is {} degrees, the humidity is {}% and the wind speed is {} mph.""".format(condition, city, temperature_c, humidity, wind_mph)
         dispatcher.utter_message(response)
-        return [SlotSet('location', loc)]
+        return [AllSlotsReset()]
 
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+
+class ActionHelloWorld(Action):
+
+    def name(self) -> Text:
+        return "action_hello_world"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="Hello, RASA here!")
+
+        return []

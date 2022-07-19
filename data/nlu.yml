@@ -108,6 +108,8 @@ nlu:
 
 - intent: weather
   examples: |
+    - weather condition
+    - weather
     - what's the weather
     - what is the temperature today
     - what is the temperature

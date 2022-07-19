@@ -5,6 +5,7 @@ stories:
 - story: happy path
   steps:
   - intent: greet
+  - action: action_hello_world
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
@@ -47,6 +48,7 @@ stories:
 - story: weather long
   steps:
   - intent: greet
+  - action: action_hello_world
   - action: utter_greet
   - intent: weather
   - action: utter_ask_location
@@ -59,17 +61,10 @@ stories:
 - story: weather short
   steps:
   - intent: greet
+  - action: action_hello_world
   - action: utter_greet
   - intent: weather_for_location
   - action: action_get_weather
   - intent: thanks
   - action: utter_welcome
   - action: utter_goodbye
-
-# - story: New Story
-#   steps:
-#     - intent: greet
-#     - action: utter_greet
-#     - intent: weather_for_location{"location":"London"}
-#     - action: utter_getting_weather
-#     - action: action_get_weather
