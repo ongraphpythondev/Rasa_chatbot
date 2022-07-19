@@ -20,7 +20,7 @@ class ActionCheckWeather(Action):
     
     def run(self, dispatcher, tracker, domain):
         print("Vinayy ")
-        api_key = '1a1c81af300a919cbc5225327e83dca2'
+        api_key = '******'
         print("fdsfjsbdfjfbsjb")
         loc = tracker.get_slot('location')
         current = requests.get('http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'.format(loc, api_key)).json()
